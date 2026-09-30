@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="kk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Абдукаримов отбасы сізді Амирхан мен Нилуфардың үйлену тойына шақырады — 5 қараша 2026, сағат 16:00, «Бахт саройи» мейрамханасы." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="kk_KZ" />
+    <meta property="og:site_name" content="Үйлену тойына шақыру" />
+    <meta property="og:title" content="Амирхан & Нилуфар — Үйлену тойына шақыру" />
+    <meta property="og:description" content="Абдукаримов отбасы сізді Амирхан мен Нилуфардың үйлену тойына шақырады — 5 қараша 2026, сағат 16:00, «Бахт саройи» мейрамханасы." />
+    <meta property="og:url" content="https://taklifnoma-animation.pages.dev/sardor-iroda" />
+    <meta
+      property="og:image"
+      content="/assets/lokatsiya-cutout-C5i7Qws-.png"
+    />
+    <meta property="og:image:alt" content="Амирхан & Нилуфар — Үйлену тойына шақыру" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Амирхан & Нилуфар — Үйлену тойына шақыру" />
+    <meta name="twitter:description" content="Абдукаримов отбасы сізді Амирхан мен Нилуфардың үйлену тойына шақырады — 5 қараша 2026, сағат 16:00, «Бахт саройи» мейрамханасы." />
+    <meta
+      name="twitter:image"
+      content="/assets/lokatsiya-cutout-C5i7Qws-.png"
+    />
+    <title>Амирхан &amp; Нилуфар — Үйлену тойына шақыру</title>
+    <script type="module" crossorigin src="/assets/index-3DyeIg9G.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-jlEgkrWH.css">
+    <style>
+      .open-hint{
+        position:absolute;
+        top:63.5%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        z-index:7;
+        width:clamp(146px,41vw,176px);
+        height:clamp(146px,41vw,176px);
+        pointer-events:none;
+      }
+      .open-hint__ring{
+        position:absolute;
+        inset:0;
+        border-radius:50%;
+        border:2px solid #f3d595;
+        opacity:0;
+        animation:open-hint-ring 2.4s ease-out infinite;
+      }
+      .open-hint__ring:nth-child(2){ animation-delay:.8s; }
+      .open-hint__ring:nth-child(3){ animation-delay:1.6s; }
+      @keyframes open-hint-ring{
+        0%{transform:scale(.8);opacity:.8}
+        70%{opacity:.18}
+        100%{transform:scale(1.16);opacity:0}
+      }
+      .door--open .open-hint{display:none}
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      (function(){
+        function addHint(){
+          var doorBtn = document.querySelector('.door');
+          if(!doorBtn){ return false; }
+          if(doorBtn.querySelector('.open-hint')){ return true; }
+          var hint = document.createElement('span');
+          hint.className = 'open-hint';
+          hint.setAttribute('aria-hidden', 'true');
+          hint.innerHTML = '<span class="open-hint__ring"></span><span class="open-hint__ring"></span><span class="open-hint__ring"></span>';
+          doorBtn.appendChild(hint);
+          return true;
+        }
+        var tries = 0;
+        var timer = setInterval(function(){
+          tries++;
+          if(addHint() || tries > 100){ clearInterval(timer); }
+        }, 100);
+      })();
+    </script>
+  </body>
+</html>
